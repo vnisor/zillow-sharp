@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\Contact.cs" />
     <Compile Include="Entities\Listing.cs" />
     <Compile Include="Entities\OpenHouse.cs" />
     <Compile Include="Entities\Photo.cs" />
