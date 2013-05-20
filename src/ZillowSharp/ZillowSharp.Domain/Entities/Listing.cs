@@ -27,7 +27,7 @@ namespace ZillowSharp.Domain.Entities
         public string CrossStreet { get; set; }
         public double Latitude { get; set; }
         public double Longitude { get; set; }
-        public string Neighborhoods { get; set; }
+        public IList<Neighborhood> Neighborhoods { get; set; }
         public string FloorNumber { get; set; }
         public string PropertyType { get; set; }
         public int Rent { get; set; }
