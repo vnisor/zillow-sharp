@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace ZillowSharp.Domain.Entities
 {
-    public class Neighborhood : IEntity
+    internal interface IEntity
     {
-        public string Name { get; set; }
     }
 }

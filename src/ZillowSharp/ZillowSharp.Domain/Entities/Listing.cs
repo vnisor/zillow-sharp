@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ZillowSharp.Domain.Entities
 {
-    public class Listing
+    public class Listing : IEntity
     {
         public string RentJuiceId { get; set; }
         public string Status { get; set; }

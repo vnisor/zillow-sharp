@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ZillowSharp.Domain.Entities
 {
-    public class Photo
+    public class Photo : IEntity
     {
         public int SortOrder { get; set; }
         public bool MainPhoto { get; set; }

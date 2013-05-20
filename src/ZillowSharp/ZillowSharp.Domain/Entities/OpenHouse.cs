@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ZillowSharp.Domain.Entities
 {
-    public class OpenHouse
+    public class OpenHouse : IEntity
     {
         public string MobilePhone { get; set; }
         public string Email { get; set; }
