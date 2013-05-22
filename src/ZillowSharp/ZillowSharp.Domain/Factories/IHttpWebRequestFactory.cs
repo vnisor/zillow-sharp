@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ZillowSharp.Domain.Entities
+namespace ZillowSharp.Domain.Factories
 {
-    public interface IEntity
+    public interface IHttpWebRequestFactory
     {
 
     }
