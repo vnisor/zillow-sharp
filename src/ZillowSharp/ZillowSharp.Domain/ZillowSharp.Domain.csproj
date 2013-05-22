@@ -42,6 +42,8 @@
   <ItemGroup>
     <Compile Include="Commands\IZillowChangeCommand.cs" />
     <Compile Include="Commands\IZillowFindCommand.cs" />
+    <Compile Include="Commands\Listings\ListingSearchParameter.cs" />
+    <Compile Include="Commands\Listings\ListingsSearchCommand.cs" />
     <Compile Include="Entities\Contact.cs" />
     <Compile Include="Entities\IEntity.cs" />
     <Compile Include="Entities\Listing.cs" />
