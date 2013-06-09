@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ZillowSharp.Core;
 using ZillowSharp.Domain.Entities;
 
 namespace ZillowSharp.Domain.Commands.Listings
@@ -23,7 +22,7 @@ namespace ZillowSharp.Domain.Commands.Listings
 
         public Listing Execute(Services.IZillowService service)
         {
-            Validate.NotNull(service);
+            //Validate.NotNull(service);
 
             var url = service.BuildUrl("listings.json?");
 
