@@ -1,13 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ZillowSharp.Domain.Entities
 {
     public class Neighborhood : IEntity
     {
+        #region Properties
+
         public string Name { get; set; }
+
+        #endregion
+
     }
 }
