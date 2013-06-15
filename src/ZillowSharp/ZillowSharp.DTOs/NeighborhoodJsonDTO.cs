@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ZillowSharp.DTOs
 {
-    public class NeighborhoodDTO
+    public class NeighborhoodJsonDTO
     {
         public string Name { get; set; }
     }
