@@ -9,6 +9,6 @@ namespace ZillowSharp.Domain.Repositories
 {
     public interface IListingRepository
     {
-        IList<Listing> FindAll();
+        IList<Listing> FindAll(int page, int limit);
     }
 }

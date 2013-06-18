@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\packages\AutoMapper.2.2.1\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="RestSharp">
       <HintPath>..\packages\RestSharp.104.1\lib\net4\RestSharp.dll</HintPath>
     </Reference>
@@ -49,6 +52,10 @@
     <ProjectReference Include="..\ZillowSharp.Domain\ZillowSharp.Domain.csproj">
       <Project>{d60878e8-10bf-4c5d-81e2-2b00cd64a0ec}</Project>
       <Name>ZillowSharp.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ZillowSharp.DTOs\ZillowSharp.DTOs.csproj">
+      <Project>{3210ba11-fa50-415d-894e-cf9156b30bfa}</Project>
+      <Name>ZillowSharp.DTOs</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
