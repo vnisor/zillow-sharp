@@ -5,11 +5,13 @@ using ZillowSharp.Domain.Repositories;
 using ZillowSharp.Domain.Entities;
 using RestSharp;
 using ZillowSharp.DTOs;
+using ZillowSharp.Domain.Repositories.Exceptions;
 
 namespace ZillowSharp.Persistence.ZillowAPI
 {
     public class ZillowListingRepository : IListingRepository
     {
+        private const string QUERY_STRING_FORMAT = "/{0}/listings.json?page={1}&limit={2}";
         private readonly string _apiKey;
         /// <summary>
         /// Initializes a new instance of the ZillowListingRepository class.
@@ -24,29 +26,42 @@ namespace ZillowSharp.Persistence.ZillowAPI
 
         public IList<Listing> FindAll(int page, int limit)
         {
-            var client = new RestClient();
+            var client = new RestClient() 
+            { 
+                BaseUrl = "https://api.rentalapp.zillow.com" 
+            };
 
-            client.BaseUrl = "https://api.rentalapp.zillow.com";
-            
-
-            var request = new RestRequest();
-            request.Resource = String.Format("/{0}/listings.json?page={1}&limit={2}", _apiKey, page, limit);
+            var request = new RestRequest() 
+            { 
+                Resource = String.Format(QUERY_STRING_FORMAT, _apiKey, page, limit) 
+            };
 
             var listingJsonResponse = client.Execute<ListingsJsonResponse>(request);
 
             if (listingJsonResponse.StatusCode != System.Net.HttpStatusCode.OK)
             {
-                //TODO: throw some sort of exception...
+                throw new ListingQueryFailure(request.Resource, listingJsonResponse.StatusCode.ToString());
             }
 
             if (listingJsonResponse.ErrorException != null)
             {
-                //TODO: create specific exception type...
-                throw new Exception(listingJsonResponse.ErrorException.ToString());
+                throw new ListingQueryFailure(request.Resource, listingJsonResponse.StatusCode.ToString());
             }
 
             var listings = new List<Listing>();
 
+            BindJsonResponse(listingJsonResponse, listings);
+
+            return listings;
+        }
+
+        /// <summary>
+        /// Binds the Json response to a List<Listing>
+        /// </summary>
+        /// <param name="listingJsonResponse"></param>
+        /// <param name="listings"></param>
+        private static void BindJsonResponse(IRestResponse<ListingsJsonResponse> listingJsonResponse, List<Listing> listings)
+        {
             foreach (var item in listingJsonResponse.Data.Listings as List<ListingJsonDTO>)
             {
                 listings.Add(new Listing.Builder()
@@ -91,8 +106,8 @@ namespace ZillowSharp.Persistence.ZillowAPI
                                     {
                                         Name = x.ToString()
                                     }).ToList<Neighborhood>(),
-                                    OpenHouses = item.OpenHouses.Select(x => new OpenHouse() 
-                                    { 
+                                    OpenHouses = item.OpenHouses.Select(x => new OpenHouse()
+                                    {
                                         Agent = x.Agent,
                                         Date = x.Date,
                                         Email = x.Email,
@@ -133,8 +148,6 @@ namespace ZillowSharp.Persistence.ZillowAPI
                                     ZipCode = item.ZipCode
                                 }.Build());
             }
-
-            return listings;
         }
     }
 }
