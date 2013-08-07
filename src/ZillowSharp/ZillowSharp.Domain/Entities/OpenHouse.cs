@@ -10,7 +10,7 @@ namespace ZillowSharp.Domain.Entities
 
         public string Agent { get; set; }
 
-        public DateTime Date { get; set; }
+        public DateTime? Date { get; set; }
 
         public string Email { get; set; }
 

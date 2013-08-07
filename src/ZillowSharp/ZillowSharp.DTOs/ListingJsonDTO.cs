@@ -28,10 +28,10 @@ namespace ZillowSharp.DTOs
         public string Attribution { get; set; }
 
         [DataMember(Name = "bathrooms")]
-        public int Bathrooms { get; set; }
+        public double? Bathrooms { get; set; }
 
         [DataMember(Name = "bedrooms")]
-        public int Bedrooms { get; set; }
+        public double? Bedrooms { get; set; }
 
         [DataMember(Name = "bedrooms_display")]
         public string BedroomsDisplay { get; set; }
@@ -43,7 +43,7 @@ namespace ZillowSharp.DTOs
         public string City { get; set; }
 
         [DataMember(Name = "contacts")]
-        public IList<ContactJsonDTO> Contacts { get; set; }
+        public List<ContactJsonDTO> Contacts { get; set; }
 
         [DataMember(Name = "cross_street")]
         public string CrossStreet { get; set; }
@@ -52,22 +52,22 @@ namespace ZillowSharp.DTOs
         public string CurrentTenant { get; set; }
 
         [DataMember(Name = "date_available")]
-        public DateTime DateAvailable { get; set; }
+        public DateTime? DateAvailable { get; set; }
 
         [DataMember(Name = "date_created")]
-        public DateTime DateCreated { get; set; }
+        public DateTime? DateCreated { get; set; }
 
         [DataMember(Name = "deposit")]
-        public int Deposit { get; set; }
+        public int? Deposit { get; set; }
 
         [DataMember(Name = "description")]
         public string Description { get; set; }
 
         [DataMember(Name = "agent_email")]
-        public bool DisplayAddress { get; set; }
+        public string DisplayAddress { get; set; }
 
         [DataMember(Name = "featured")]
-        public bool Featured { get; set; }
+        public string Featured { get; set; }
 
         [DataMember(Name = "features")]
         public string Features { get; set; }
@@ -85,34 +85,34 @@ namespace ZillowSharp.DTOs
         public string FloorNumber { get; set; }
 
         [DataMember(Name = "last_updated")]
-        public DateTime LastUpdated { get; set; }
+        public DateTime? LastUpdated { get; set; }
 
         [DataMember(Name = "latitue")]
-        public double Latitude { get; set; }
+        public double? Latitude { get; set; }
 
         [DataMember(Name = "listing_type")]
         public string ListingType { get; set; }
 
         [DataMember(Name = "longitude")]
-        public double Longitude { get; set; }
+        public double? Longitude { get; set; }
 
         [DataMember(Name = "mls_number")]
         public string MlsNumber { get; set; }
 
         [DataMember(Name = "neighborhoods")]
-        public IList<NeighborhoodJsonDTO> Neighborhoods { get; set; }
+        public string Neighborhoods { get; set; }
 
         [DataMember(Name = "open_houses")]
-        public IList<OpenHouseJsonDTO> OpenHouses { get; set; }
+        public List<OpenHouseJsonDTO> OpenHouses { get; set; }
 
         [DataMember(Name = "parking_spaces")]
-        public int ParkingSpaces { get; set; }
+        public int? ParkingSpaces { get; set; }
 
         [DataMember(Name = "parking_space_type")]
         public string ParkingSpaceType { get; set; }
 
         [DataMember(Name = "photos")]
-        public IList<PhotoJsonDTO> Photos { get; set; }
+        public List<PhotoJsonDTO> Photos { get; set; }
 
         [DataMember(Name = "property_type")]
         public string PropertyType { get; set; }
@@ -121,7 +121,7 @@ namespace ZillowSharp.DTOs
         public string ReceivedDescription { get; set; }
 
         [DataMember(Name = "rent")]
-        public int Rent { get; set; }
+        public int? Rent { get; set; }
 
         [DataMember(Name = "rental_terms")]
         public string RentalTerms { get; set; }
@@ -139,7 +139,7 @@ namespace ZillowSharp.DTOs
         public string SourceType { get; set; }
 
         [DataMember(Name = "square_footage")]
-        public int SquareFootage { get; set; }
+        public int? SquareFootage { get; set; }
 
         [DataMember(Name = "state")]
         public string State { get; set; }

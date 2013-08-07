@@ -13,10 +13,10 @@ namespace ZillowSharp.DTOs
         public string FullSizeUrl { get; set; }
 
         [DataMember(Name = "main_photo")]
-        public bool MainPhoto { get; set; }
+        public string MainPhoto { get; set; }
 
         [DataMember(Name = "sort_order")]
-        public int SortOrder { get; set; }
+        public int? SortOrder { get; set; }
 
         [DataMember(Name = "thumbnail_url")]
         public string ThumbnailUrl { get; set; }

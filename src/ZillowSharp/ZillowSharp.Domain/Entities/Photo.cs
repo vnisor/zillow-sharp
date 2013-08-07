@@ -10,9 +10,9 @@ namespace ZillowSharp.Domain.Entities
 
         public string FullSizeUrl { get; set; }
 
-        public bool MainPhoto { get; set; }
+        public string MainPhoto { get; set; }
 
-        public int SortOrder { get; set; }
+        public int? SortOrder { get; set; }
 
         public string ThumbnailUrl { get; set; }
 

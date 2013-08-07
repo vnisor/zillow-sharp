@@ -26,9 +26,9 @@ namespace ZillowSharp.Domain.Entities
 
         public string Attribution { get; private set; }
 
-        public int Bathrooms { get; private set; }
+        public double? Bathrooms { get; private set; }
 
-        public int Bedrooms { get; private set; }
+        public double? Bedrooms { get; private set; }
 
         public string BedroomsDisplay { get; private set; }
 
@@ -42,17 +42,17 @@ namespace ZillowSharp.Domain.Entities
 
         public string CurrentTenant { get; private set; }
 
-        public DateTime DateAvailable { get; private set; }
+        public DateTime? DateAvailable { get; private set; }
 
-        public DateTime DateCreated { get; private set; }
+        public DateTime? DateCreated { get; private set; }
 
-        public int Deposit { get; private set; }
+        public int? Deposit { get; private set; }
 
         public string Description { get; private set; }
 
-        public bool DisplayAddress { get; private set; }
+        public string DisplayAddress { get; private set; }
 
-        public bool Featured { get; private set; }
+        public string Featured { get; private set; }
 
         public string Features { get; private set; }
 
@@ -64,13 +64,13 @@ namespace ZillowSharp.Domain.Entities
 
         public string FloorNumber { get; private set; }
 
-        public DateTime LastUpdated { get; private set; }
+        public DateTime? LastUpdated { get; private set; }
 
-        public double Latitude { get; private set; }
+        public double? Latitude { get; private set; }
 
         public string ListingType { get; private set; }
 
-        public double Longitude { get; private set; }
+        public double? Longitude { get; private set; }
 
         public string MlsNumber { get; private set; }
 
@@ -78,7 +78,7 @@ namespace ZillowSharp.Domain.Entities
 
         public IList<OpenHouse> OpenHouses { get; private set; }
 
-        public int ParkingSpaces { get; private set; }
+        public int? ParkingSpaces { get; private set; }
 
         public string ParkingSpaceType { get; private set; }
 
@@ -88,7 +88,7 @@ namespace ZillowSharp.Domain.Entities
 
         public string ReceivedDescription { get; private set; }
 
-        public int Rent { get; private set; }
+        public int? Rent { get; private set; }
 
         public string RentalTerms { get; private set; }
 
@@ -100,7 +100,7 @@ namespace ZillowSharp.Domain.Entities
 
         public string SourceType { get; private set; }
 
-        public int SquareFootage { get; private set; }
+        public int? SquareFootage { get; private set; }
 
         public string State { get; private set; }
 
@@ -166,13 +166,13 @@ namespace ZillowSharp.Domain.Entities
                 set { listing.Attribution = value; }
             }
 
-            public int Bathrooms 
+            public double? Bathrooms 
             {
                 get { return listing.Bathrooms; }
                 set { listing.Bathrooms = value; }
             }
 
-            public int Bedrooms
+            public double? Bedrooms
             {
                 get { return listing.Bedrooms; }
                 set { listing.Bedrooms = value; }
@@ -214,19 +214,19 @@ namespace ZillowSharp.Domain.Entities
                 set { listing.CurrentTenant = value; }
             }
 
-            public DateTime DateAvailable 
+            public DateTime? DateAvailable 
             {
                 get { return listing.DateAvailable; }
                 set { listing.DateAvailable = value; }
             }
 
-            public DateTime DateCreated 
+            public DateTime? DateCreated 
             {
                 get { return listing.DateCreated; }
                 set { listing.DateCreated = value; }
             }
 
-            public int Deposit 
+            public int? Deposit 
             {
                 get { return listing.Deposit; }
                 set { listing.Deposit = value; }
@@ -238,13 +238,13 @@ namespace ZillowSharp.Domain.Entities
                 set { listing.Description = value; }
             }
 
-            public bool DisplayAddress
+            public string DisplayAddress
             {
                 get { return listing.DisplayAddress; }
                 set { listing.DisplayAddress = value; }
             }
 
-            public bool Featured 
+            public string Featured 
             {
                 get { return listing.Featured; }
                 set { listing.Featured = value; }
@@ -280,13 +280,13 @@ namespace ZillowSharp.Domain.Entities
                 set { listing.FloorNumber = value; }
             }
 
-            public DateTime LastUpdated 
+            public DateTime? LastUpdated 
             {
                 get { return listing.LastUpdated; }
                 set { listing.LastUpdated = value; }
             }
 
-            public double Latitude 
+            public double? Latitude 
             {
                 get { return listing.Latitude; }
                 set { listing.Latitude = value; }
@@ -298,7 +298,7 @@ namespace ZillowSharp.Domain.Entities
                 set { listing.ListingType = value; }
             }
 
-            public double Longitude 
+            public double? Longitude 
             {
                 get { return listing.Longitude; }
                 set { listing.Longitude = value; }
@@ -322,7 +322,7 @@ namespace ZillowSharp.Domain.Entities
                 set { listing.OpenHouses = value; }
             }
 
-            public int ParkingSpaces 
+            public int? ParkingSpaces 
             {
                 get { return listing.ParkingSpaces; }
                 set { listing.ParkingSpaces = value; }
@@ -352,7 +352,7 @@ namespace ZillowSharp.Domain.Entities
                 set { listing.ReceivedDescription = value; }
             }
 
-            public int Rent 
+            public int? Rent 
             {
                 get { return listing.Rent; }
                 set { listing.Rent = value; }
@@ -389,7 +389,7 @@ namespace ZillowSharp.Domain.Entities
 
             }
 
-            public int SquareFootage
+            public int? SquareFootage
             {
                 get { return listing.SquareFootage; }
                 set { listing.SquareFootage = value; }

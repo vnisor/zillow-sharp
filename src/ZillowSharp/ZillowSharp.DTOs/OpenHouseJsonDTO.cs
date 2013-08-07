@@ -13,7 +13,7 @@ namespace ZillowSharp.DTOs
         public string Agent { get; set; }
 
         [DataMember(Name = "date")]
-        public DateTime Date { get; set; }
+        public DateTime? Date { get; set; }
 
         [DataMember(Name = "email")]
         public string Email { get; set; }

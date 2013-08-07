@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="ContactJsonDTO.cs" />
     <Compile Include="ListingJsonDTO.cs" />
+    <Compile Include="ListingsJsonResponse.cs" />
     <Compile Include="NeighborhoodJsonDTO.cs" />
     <Compile Include="OpenHouseJsonDTO.cs" />
     <Compile Include="PhotoJsonDTO.cs" />
